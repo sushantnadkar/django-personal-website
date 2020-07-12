@@ -10,7 +10,7 @@
             <div class="card-body">
             <h1><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h1>
             <p class="card-text mb-5 text-muted">{{ post.author }} | {{ post.created_on }}</p>
-            <p class="card-text mb-5 text-muted">{{ post.content|slice:":200" }}</p>
+            <p class="card-text mb-5 text-muted">{{ post.content|safe|slice:":200" }}</p>
             <p class="card-text mb-5">
                 <a href="{% url 'post_detail' post.slug %}">Continue Reading >></a>
             </p>
