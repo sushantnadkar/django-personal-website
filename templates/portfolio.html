@@ -1,0 +1,595 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{% static 'stylesheet/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesheet/portfolio.css' %}">
+        
+    </style>
+</head>
+
+<body class="">
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header class="sticky">
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a class="no-scroll" href="https://sushantnadkar.github.io/devblog">Blog</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#volunteer-work">Volunteer Work</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead" style="background: url({% static 'images/portfolio-bg.jpg' %});">
+        <div id="lead-content">
+            <h1>Sushant Nadkar</h1>
+            <h2>Software Developer, Maker</h2>
+            <a href="#" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        I am a software developer graduated from University of Mumbai. I like trekking and love to BUILD things. I believe that doing things practically is much better way to understand, because, <b>B</b>etter <b>U</b>nderstanding <b>I</b>nvolves <b>L</b>earning &amp; <b>D</b>oing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">May 2017 – July 2018</span><div data-date="May 2017 – July 2018" class="vtimeline-content">
+                <h3>DigiThinkIT, Inc</h3>
+                <h4>Software Developer</h4>
+                <p>
+                    Developed and designed an ERP system along with team of developers to meet and fullfill client's expectations and requirement.
+                </p>
+            </div></div></div>
+
+            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">April 2016 – April 2017</span><div data-date="April 2016 – April 2017" class="vtimeline-content">
+                <h3>Packt Publishing Limited</h3>
+                <h4>Technical Editor</h4>
+                <p>
+                    Responsible for improving technical accuracy of product, it's content structure, and making sure that all code is correct and executes as per the author's instructions.
+                </p>
+            </div></div></div>
+
+            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">May 2013 – Present</span><div data-date="May 2013 – Present" class="vtimeline-content">
+                <h3>VIBGYOR</h3>
+                <h4>Organising Committee and a Founding Member</h4>
+                <p>
+                    Managing events, funds and making dcisions related to Vibgyor's activities year round.
+                </p>
+            </div></div></div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>University Department of Computer Science</h3>
+            <h4>University of Mumbai</h4>
+            <span class="education-date">Sept 2018 - Present</span>
+            <h4>Masters of Science in Computer Science</h4>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>K V Pendharkar College of Arts, Science and Commerce</h3>
+            <h4>University of Mumbai</h4>
+            <span class="education-date">June 2012 - May 2015</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+        </div>
+        <div class="education-block">
+            <h3>Saket College Of Arts, Science and Commerce</h3>
+            <h4>University of Mumbai</h4>
+            <span class="education-date">June 2010 - May 2012</span>
+            <h4>Higher Secondary Certificate—Electronics </h4>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <h3 class="heading">Software</h3>
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/350">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Housing Society Management System</h3>
+                        <p>
+                            Third year project for B.Sc (Computerscience). A Java software to manage the basic data management for a residential housing society, to manage the basic details of the owners and the occupants of an apartment.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/350">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Electronic Ballot Box</h3>
+                        <p>
+                            A ballot box implimented in Java to collect the votes of participants and the organizing commiette for the election of a team leader of VIBGYOR's annual summer camp.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/350">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Website for VIBGYOR</h3>
+                        <p>
+                            A public website to let the world know about VIBGYOR. And put up the details and pictures of activities carried on by the organization.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <a id="view-more-projects" href="#" style="display: block;">View More Projects</a>
+                <div id="more-projects" class="row" style="display: none;">
+                    <h3 class="heading">Arduino</h3>
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Home Automation</h3>
+                            <p>
+                                A smartphone voice controlled, Arduino setup to control the lights and other home appliences.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Quiz Buzzer</h3>
+                            <p>
+                                Developed for a quiz organized by VIBGYOR to find who is the fastest team to press the buzzer first among all other compitators.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Water Tank Level Indicator viz SMS</h3>
+                            <p>
+                                Water tank level indicator that alerts the user viz SMS to turn on the water pump to fill the tank. This setup also have the ability to switch off the pump what the water tank is full.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Line follower with Color Recognization</h3>
+                            <p>
+                                Wheeled bot the follows the line on a flat surface and navigates the arena. It also have the ability to recognize the color of the said line and make decision on where to turn based on it.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>2D Plotter</h3>
+                            <p>
+                                2 dimentional printer for drawing vector graphics using a pen.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <h3 class="heading">Electronics</h3>
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Fridge Door Alarm using 555</h3>
+                            <p>
+                                A 555 IC implimentation to alter the user if a fridge door is left open for more than specified amount of time.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Variable Power Supply using 317</h3>
+                            <p>
+                                Variable power supply made using LN317 to power DIY projects.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Audio aplifier using transistor</h3>
+                            <p>
+                                An audio amplifier made using transistor to get familier with the properties of transistor working in the active region.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Audio Amplifier using Operational Amplifiers</h3>
+                            <p>
+                                Using a low cost IC LM358 to make a simple audio amplifier.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Pre Amplifier for microphone</h3>
+                            <p>
+                                Using LM358 to make a pre amplifier for a microphone with a low output gain, to be further amplified by an amplifier.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <h3 class="heading">Textile</h3>
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Camping Tent</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Chalk Bag for Rock Climbing</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <h3 class="heading">Wood Work</h3>
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Cubicals To Be Used as Washroom</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Stand for Flex Banner</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Harry Potter Wand</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+
+                    <h3 class="heading">Other</h3>
+                    <div class="project shadow-large">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/350">
+                        </div>
+                        <!-- End .project-image -->
+                        <div class="project-info">
+                            <h3>Jewelery Making</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            </p>
+                            <a href="#">View Project</a>
+                        </div>
+                        <!-- End .project-info -->
+                    </div>
+                    <!-- End .project -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="volunteer-work" class="optional-section">
+        <h2 class="heading">Volunteer Work Experience</h2>
+
+        <div class="optional-section-block">
+            <h3>VIBGYOR</h3>
+            <p>
+                A group of nature enthusiasts who came together for their love of nature, carrying out various activities to promote environment friendly practices.
+            </p>
+            <h3>Organising Committee</h3>
+            <ul>
+                <li>
+                    Planned, executed and oversaw all the activities of the organisation
+                </li>
+                <li>
+                    Lead the volunteers, encouraged and motivated them to ensure timely delivery
+                </li>
+                <li>
+                    Handled accounts of the organisation for couple of years
+                </li>
+            </ul>
+        </div>
+        <!-- End .optional-section-block -->
+
+        <div class="optional-section-block">
+            <h3>National Service Scheme (NSS) at K. V. Pendharkar College</h3>
+            <p>
+                The National Service Scheme (NSS) is an Indian government-sponsored public service program conducted by the Ministry of Youth Affairs and Sports of the Government of India. The programme aims to instill the idea of social welfare in students, and to provide service to society without bias. NSS volunteers work to ensure that everyone who is needy gets help to enhance their standard of living and lead a life of dignity.
+            </p>
+            <h3>Unit Leader</h3>
+            <ul>
+                <li>
+                    Lead 200 student volunteers at K.V. Pendharkar College
+                </li>
+                <li>
+                    Provided about 300 books for local schools in a rural area
+                </li>
+                <li>
+                    Supervised annual blood collection drive in collaboration with Rotaract International and NCC
+                </li>
+                <li>
+                    Managed 7 days NSS camp by overseeing daily activates for about 100 volunteers
+                </li>
+            </ul>
+        </div>
+        <!-- End .optional-section-block -->
+
+    </div>
+    <!-- End .optional-section -->
+
+    <div id="skills" class="background-alt">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Git</li>
+            <li>IoT</li>
+            <li>Arduino</li>
+            <li>Project Management</li>
+            <li>Team Management</li>
+            <li>Electrical</li>
+            <li>Wiring</li>
+            <li>Powertools Handeling</li>
+            <li>Woodwork</li>
+            <li>Tailoring</li>
+            <li>Stitching</li>
+            <li>Prototyping</li>
+            <li>Electronics</li>
+            <li>PowerSupply</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/email@email.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website">
+                <input type="email" name="_replyto" placeholder="Your email" required="">
+                <textarea name="message" placeholder="Your message" required=""></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright © 2019 SUSHANT NADKAR
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/sushantnadkar" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/4092075/sushant-nadkar?tab=profile" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/sushantnadkar/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/sushant.nadkar" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'javascript/portfolio.js' %}"></script>
+
+
+
+</body></html>
