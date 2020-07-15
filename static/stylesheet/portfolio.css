@@ -356,6 +356,10 @@ h3.heading {
     margin: 0
 }
 
+#about p b {
+    color: #3498db;
+}
+
 #experience {
     padding: 50px 15px;
     text-align: center;
@@ -544,13 +548,14 @@ h3.heading {
 .project-info {
     margin: auto;
     padding: 0 3em;
+    height: 250px;
 }
 
 .project-info h3 {
     font-size: 1.5em;
     font-weight: 300;
     color: #374054;
-    margin: 0 0 15px 0
+    margin: 50px 0 15px 0
 }
 
 .project-info p {
@@ -759,7 +764,10 @@ h3.heading {
         text-align: center
     }
     #about p {
-        text-align: left
+        text-align: center
+    }
+    #about p b {
+        color: #3498db;
     }
 }
 
@@ -806,10 +814,13 @@ h3.heading {
     }
     .project-info {
         position: relative;
-        margin: 0;
+        margin: auto;
         padding: 30px 15px;
         top: auto;
         transform: none
+    }
+    .project-info h3 {
+        margin-top: 0px;
     }
     footer {
         text-align: center
