@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'blog',
     'portfolio',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,6 @@ MEDIA_URL = '/media/'
 
 # Required for summernote
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# Template for Crispy forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

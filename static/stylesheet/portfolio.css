@@ -62,6 +62,20 @@ header {
     animation-duration: 0.75s
 }
 
+.nav-container {
+    width: fit-content !important;
+}
+
+nav {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.nav-link {
+    color: #3498db !important;
+}
+
 header ul {
     display: inline-block;
     background: #fff;
@@ -202,10 +216,11 @@ footer {
 .btn-rounded-white {
     display: inline-block;
     color: #fff;
-    padding: 15px 25px;
+    padding: 10px 15px;
     border: 3px solid #fff;
     border-radius: 30px;
-    transition: .5s ease all
+    transition: .5s ease all;
+    font-size: small;
 }
 
 .btn-rounded-white:hover {
@@ -227,7 +242,8 @@ footer {
     display: inline-block;
     font-size: 2em;
     font-weight: 300;
-    margin: 0 0 30px 0
+    margin: 0 0 30px 0;
+    padding-top: 30px;
 }
 
 .heading:after {
@@ -277,7 +293,7 @@ h3.heading {
 #lead-content h1 {
     color: #fff;
     font-weight: 900;
-    font-size: 5em;
+    font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 0.9em
@@ -286,7 +302,7 @@ h3.heading {
 #lead-content h2 {
     color: #a0cfee;
     font-weight: 500;
-    font-size: 2.25em;
+    font-size: 1.3em;
     margin-bottom: 15px
 }
 
@@ -526,19 +542,19 @@ h3.heading {
     margin-bottom: 30px
 }
 
+#projects .row {
+    flex-direction: column;
+}
+
 .project {
     display: flex;
     position: relative;
-    max-width: 800px;
+    width: 60%;
     margin: 0 auto 30px auto;
     overflow: hidden;
     background: #fff;
     border-radius: 4px
 }
-
-/* .project-image {
-    float: left
-} */
 
 .project-image img {
     width: 250px;
@@ -608,13 +624,18 @@ h3.heading {
 #contact {
     padding: 50px 15px;
     background: #3498db;
-    text-align: center
 }
 
 #contact h2 {
     margin: 0 0 15px 0;
     color: #fff;
-    font-weight: 500
+    font-weight: 500;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#contact label {
+    color: #fff;
 }
 
 #contact-form {
@@ -623,12 +644,7 @@ h3.heading {
 }
 
 #contact-form input, #contact-form textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
     border: none;
-    margin-bottom: 10px;
     background: #1d6fa5;
     color: #fff;
     transition: .5s ease all
@@ -840,5 +856,8 @@ h3.heading {
     #lead-content a {
         font-size: 0.9em;
         padding: 5px 10px
+    }
+    .project {
+        width: 100%;
     }
 }
