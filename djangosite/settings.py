@@ -135,3 +135,11 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Template for Crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Email server settings for Google
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='<smtp_user>'
+EMAIL_HOST_PASSWORD='<smtp_user_pwd>'
+EMAIL_USE_TLS=True

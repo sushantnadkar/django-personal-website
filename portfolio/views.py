@@ -13,6 +13,5 @@ class ProjectListAndContactForm(generic.ListView, generic.edit.FormView):
 	object_list = None
 
 	def form_valid(self, form):
-		print("="*100,"\n",form.cleaned_data)
 		form.send_email()
 		return super(ProjectListAndContactForm, self).form_valid(form)

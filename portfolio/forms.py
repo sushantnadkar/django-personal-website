@@ -1,4 +1,6 @@
+from django.conf import settings
 from django import forms
+from django.core.mail import send_mail, get_connection
 
 class ContactForm(forms.Form):
     sender = forms.EmailField(widget=forms.TextInput(attrs={ "id":"email_sender" }))
@@ -7,4 +9,17 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea(attrs={ "id":"email_message" }))
 
     def send_email(self):
-        print(self.changed_data[0])
+        recipients = ["nadkarsushant@gmail.com"]
+        if self.cleaned_data["cc_myself"]:
+            recipients.append(self.cleaned_data["sender"])
+
+        if settings.DEBUG:
+            con = get_connection('django.core.mail.backends.console.EmailBackend')
+        send_mail(
+            self.cleaned_data["subject"],
+            self.cleaned_data["message"],
+            self.cleaned_data["sender"],
+            recipients,
+            fail_silently=True,
+            connection=con,
+        )
