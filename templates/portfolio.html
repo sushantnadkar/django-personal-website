@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<html class="" lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,14 +21,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav">
-                  <a class="nav-item nav-link active" href="#">Blog</a>
-                  <a class="nav-item nav-link" href="#about">About</a>
-                  <a class="nav-item nav-link" href="#experience">Experience</a>
-                  <a class="nav-item nav-link" href="#education">Education</a>
-                  <a class="nav-item nav-link" href="#projects">Projects</a>
-                  <a class="nav-item nav-link" href="#volunteer-work">Volunteer Work</a>
-                  <a class="nav-item nav-link" href="#skills">Skills</a>
-                  <a class="nav-item nav-link" href="#contact">Contact</a>
+                  <a class="nav-item nav-link js-scroll-to" href="#">Blog</a>
+                  <a class="nav-item nav-link js-scroll-to" href="#about">About</a>
+                  <a class="nav-item nav-link js-scroll-to" href="#experience">Experience</a>
+                  <a class="nav-item nav-link js-scroll-to" href="#education">Education</a>
+                  <a class="nav-item nav-link js-scroll-to" href="#projects">Projects</a>
+                  <a class="nav-item nav-link js-scroll-to" href="#volunteer-work">Volunteer Work</a>
+                  <a class="nav-item nav-link js-scroll-to" href="#skills">Skills</a>
+                  <a class="nav-item nav-link js-scroll-to" href="#contact">Contact</a>
                 </div>
         </nav>
     </div>
@@ -44,7 +45,7 @@
         <div id="lead-overlay"></div>
 
         <div id="lead-down">
-            <span>
+            <span class="js-lead-down">
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
             </span>
         </div>
@@ -148,10 +149,11 @@
                                 </div>
                             {% endfor %}
                             {% ifequal projects.grouper|stringformat:"s" "Software" %}
-                            <a id="view-more-projects" href="#">View More Projects</a>
+                            <a class="js-view-more-projects" href="#">View More Projects</a>
                             <div id="more-projects" class="row">
                             {% endifequal %}
                     {% endfor %}
+                    <a class="js-view-less-projects" style="display: none;" href="#">View Less</a>
                 </div>
             </div>
         </div>
@@ -254,7 +256,7 @@
                     </p>
                 </div>
                 <div class="col-sm-2 top">
-                    <span id="to-top">
+                    <span class="js-to-top">
                         <i class="fa fa-chevron-up" aria-hidden="true"></i>
                     </span>
                 </div>
@@ -286,7 +288,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <!-- Custome JS -->
     <script src="{% static 'javascript/portfolio.js' %}"></script>
-
-
-
-</body></html>
+</body>
+</html>
