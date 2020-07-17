@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% include 'header.html' %}
+{% include 'back_link.html' %}
 <div id="article" class="card mx-auto p-4 p-md-0">
     <div class="card-body p-0 p-md-5">
     <div class="card-head row">
@@ -10,6 +11,7 @@
     </div>
     {{ object.content | safe }}
     </div>
+    {% include 'back_link.html' %}
     {% include 'share.html' %}
 </div>
 {% endblock content %}

@@ -99,10 +99,18 @@ pre {
 	width: 100%;
 	text-align: center;
 }
+.back-link {
+	display: flex;
+	justify-content: center;
+}
+.back-link a {
+	font-size: 0.8rem;
+}
 .share a,
 #social div a,
-.paginate div a {
-	color: rgb(62, 70, 91);
+.paginate div a,
+.back-link a {
+	color: rgb(62, 70, 91) !important;
 	display: inline-block;
 	border-width: 1px;
 	border-style: solid;
@@ -111,15 +119,17 @@ pre {
 	border-radius: 45px;
 	margin: 5px;
 	padding: 5px 10px;
-	text-decoration: none;
+	text-decoration: none !important;
 }
 .share a:hover,
 #social div a:hover,
-.paginate div a:hover {
+.paginate div a:hover,
+.back-link a:hover {
     border-color: black;
 }
 .share a svg,
-#social div a svg {
+#social div a svg,
+.back-link a svg {
 	display: inline-block;
 	height: 20px;
 	margin-right: 5px;
