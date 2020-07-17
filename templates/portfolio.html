@@ -147,8 +147,12 @@
                                     </div>
                                 </div>
                             {% endfor %}
+                            {% ifequal projects.grouper|stringformat:"s" "Software" %}
+                            <a id="view-more-projects" href="#">View More Projects</a>
+                            <div id="more-projects" class="row">
+                            {% endifequal %}
                     {% endfor %}
-                </ul>
+                </div>
             </div>
         </div>
     </div>
