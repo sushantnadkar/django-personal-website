@@ -18,6 +18,7 @@
         }, 500);
     });
 
+    // Scroll on click of navbar links
     $('.js-scroll-to').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
@@ -48,7 +49,7 @@
 
     // Remove messages after displaying for specified time
     setTimeout(function() {
-        $(".msg").fadeOut(500);
-    }, 3000);
+        $(".message").fadeOut(800);
+    }, 5000);
 
 })(jQuery);

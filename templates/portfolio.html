@@ -21,7 +21,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav">
-                  <a class="nav-item nav-link js-scroll-to" href="#">Blog</a>
+                  <a class="nav-item nav-link js-scroll-to" href="{% url 'blog_home' %}">Blog</a>
                   <a class="nav-item nav-link js-scroll-to" href="#about">About</a>
                   <a class="nav-item nav-link js-scroll-to" href="#experience">Experience</a>
                   <a class="nav-item nav-link js-scroll-to" href="#education">Education</a>
@@ -236,10 +236,12 @@
     <div id="contact">
         <h2>Get in Touch</h2>
         <div id="contact-form">
+            {% if message %}
+            <div class="message">
+                    {{ message }}
+            </div>
+            {% endif %}
             <form method="post">
-                {% if message %}
-                    <p class="msg">{{ message }}</p>
-                {% endif %}
                 {% load crispy_forms_tags %}
                 {% csrf_token %}
                 <table>{{ form | crispy }}</table>
@@ -249,7 +251,6 @@
         <!-- End #contact-form -->
     </div>
     <!-- End #contact -->
-
     <footer>
         <div class="container">
             <div class="row">

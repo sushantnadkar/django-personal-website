@@ -16,11 +16,10 @@ def project_list(request):
 
 	if request.method == "POST":
 		form = ContactForm(request.POST)
-		context["message"] = "Email sent successfully!"
 		if form.is_valid():
 			form.send_email()
+			context["message"]="Email sent successfully!"
+
 			return render(request, template_name, context)
-	else:
-		form = ContactForm()
-		context["form"] = form
+
 	return render(request, template_name, context)

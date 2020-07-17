@@ -717,6 +717,17 @@ h3.heading {
     padding: 0 0 0 15px
 }
 
+.message {
+    position: fixed;
+    bottom: 29px;
+    background: lightskyblue;
+    z-index: 99999;
+    left: 29px;
+    padding: 1rem;
+    border-radius: 5px;
+    color: black;
+}
+
 @media only screen and (max-width: 750px) {
     #experience-timeline:before, #experience-timeline:after {
         left: 23px
