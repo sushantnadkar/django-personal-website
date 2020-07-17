@@ -559,19 +559,27 @@ h3.heading {
 .project-image img {
     width: 250px;
     height: 250px;
+    object-fit: cover;
 }
 
 .project-info {
     margin: auto;
-    padding: 0 3em;
+    padding: 0 1em;
     height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info div {
+    display: none;
 }
 
 .project-info h3 {
     font-size: 1.5em;
     font-weight: 300;
     color: #374054;
-    margin: 50px 0 15px 0
+    margin-bottom: 15px;
 }
 
 .project-info p {
