@@ -521,7 +521,7 @@ h3.heading {
 .project {
     display: flex;
     position: relative;
-    width: 60%;
+    width: 70%;
     margin: 0 auto 30px auto;
     overflow: hidden;
     background: #fff;
@@ -804,6 +804,9 @@ h3.heading {
     }
     .education-block h3, .education-block span {
         float: none
+    }
+    .project {
+        width: 100%;
     }
     .project-image {
         display: none

@@ -46,4 +46,9 @@
         });
     });
 
+    // Remove messages after displaying for specified time
+    setTimeout(function() {
+        $(".msg").fadeOut(500);
+    }, 3000);
+
 })(jQuery);

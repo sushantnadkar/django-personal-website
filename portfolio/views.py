@@ -1,17 +1,26 @@
 from django.views import generic
 from .models import Project
 from .forms import ContactForm
+from django.shortcuts import render
+from django.http import HttpResponseRedirect, HttpResponse
 
 
-class ProjectListAndContactForm(generic.ListView, generic.edit.FormView):
+def project_list(request):
 	queryset = Project.objects.all().order_by("category").filter(status=1)
 	template_name = "portfolio.html"
-	context_object_name = "projects"
-
 	form_class = ContactForm
-	success_url = "/#contact"
-	object_list = None
+	context = {
+		"projects": queryset,
+		"form": form_class
+	}
 
-	def form_valid(self, form):
-		form.send_email()
-		return super(ProjectListAndContactForm, self).form_valid(form)
+	if request.method == "POST":
+		form = ContactForm(request.POST)
+		context["message"] = "Email sent successfully!"
+		if form.is_valid():
+			form.send_email()
+			return render(request, template_name, context)
+	else:
+		form = ContactForm()
+		context["form"] = form
+	return render(request, template_name, context)
