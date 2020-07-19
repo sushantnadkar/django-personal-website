@@ -34,18 +34,36 @@ header {
     animation-duration: 0.75s
 }
 
-.nav-container {
-    width: fit-content !important;
+#navbar {
+    /* border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+    background-color: transparent !important;
+    box-shadow: none;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
 }
 
-nav {
+.nav-link {
+    color: #3498db !important;
+}
+
+#navbar-options {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    flex-grow: 0;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.nav-link {
-    color: #3498db !important;
+#navbar-toggler {
+    background-color: white;
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
 
 header ul {
@@ -244,7 +262,7 @@ h3.heading {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background-size: cover;
+    background-size: cover !important;
     padding: 15px;
     overflow: hidden
 }
@@ -421,7 +439,6 @@ h3.heading {
 .vtimeline-point {
     position: relative;
     display: block;
-    vertical-align: top;
     margin-bottom: 30px
 }
 
@@ -752,7 +769,7 @@ h3.heading {
     #lead {
         height: auto;
         min-height: auto;
-        max-height: auto;
+        max-height: 1080px;
         padding: 100px 15px
     }
     #lead-content {

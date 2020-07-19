@@ -3,10 +3,10 @@ from django import forms
 from django.core.mail import send_mail, get_connection
 
 class ContactForm(forms.Form):
-    sender = forms.EmailField(widget=forms.TextInput(attrs={ "id":"email_sender" }))
+    sender = forms.EmailField(label="", widget=forms.TextInput(attrs={ "id":"email_sender", "placeholder": "Email..." }))
     cc_myself = forms.BooleanField(required=False, widget=forms.CheckboxInput(attrs={ "id":"email_cc" }))
-    subject = forms.CharField(max_length=100, widget=forms.TextInput(attrs={ "id":"email_subject" }))
-    message = forms.CharField(widget=forms.Textarea(attrs={ "id":"email_message" }))
+    subject = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={ "id":"email_subject", "placeholder": "Subject..." }))
+    message = forms.CharField(label="", widget=forms.Textarea(attrs={ "id":"email_message", "placeholder": "Your message..." }))
 
     def send_email(self):
         recipients = ["nadkarsushant@gmail.com"]

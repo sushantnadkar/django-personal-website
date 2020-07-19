@@ -14,24 +14,22 @@
 </head>
 
 <body class="">
-    <div class="container nav-container fixed-top">
-        <nav class="navbar navbar-expand-md navbar-light bg-white">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav">
-                  <a class="nav-item nav-link js-scroll-to" href="{% url 'blog_home' %}">Blog</a>
-                  <a class="nav-item nav-link js-scroll-to" href="#about">About</a>
-                  <a class="nav-item nav-link js-scroll-to" href="#experience">Experience</a>
-                  <a class="nav-item nav-link js-scroll-to" href="#education">Education</a>
-                  <a class="nav-item nav-link js-scroll-to" href="#projects">Projects</a>
-                  <a class="nav-item nav-link js-scroll-to" href="#volunteer-work">Volunteer Work</a>
-                  <a class="nav-item nav-link js-scroll-to" href="#skills">Skills</a>
-                  <a class="nav-item nav-link js-scroll-to" href="#contact">Contact</a>
-                </div>
-        </nav>
-    </div>
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light fixed-top">
+        <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-options" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-options">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link js-scroll-to" href="{% url 'blog_home' %}">Blog</a>
+                <a class="nav-item nav-link js-scroll-to" href="#about">About</a>
+                <a class="nav-item nav-link js-scroll-to" href="#experience">Experience</a>
+                <a class="nav-item nav-link js-scroll-to" href="#education">Education</a>
+                <a class="nav-item nav-link js-scroll-to" href="#projects">Projects</a>
+                <a class="nav-item nav-link js-scroll-to" href="#volunteer-work">Volunteer Work</a>
+                <a class="nav-item nav-link js-scroll-to" href="#skills">Skills</a>
+                <a class="nav-item nav-link js-scroll-to" href="#contact">Contact</a>
+            </div>
+    </nav>
     <!-- End header -->
 
     <div id="lead" style="background: url({% static 'images/portfolio-bg.jpg' %});">
@@ -61,7 +59,7 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        I am a software developer graduated from University of Mumbai. I like trekking and love to BUILD things. I believe that doing things practically is much better way to understand, because, <br><b>B</b>etter <b>U</b>nderstanding <b>I</b>nvolves <b>L</b>earning &amp; <b>D</b>oing.
+                        I am a software developer graduated from University of Mumbai. I like trekking and love to BUILD things. I believe that doing things practically is much better way to understand, since, <br><b>B</b>etter <b>U</b>nderstanding <b>I</b>nvolves <b>L</b>earning &amp; <b>D</b>oing.
                     </p>
                 </div>
             </div>
@@ -244,7 +242,7 @@
             <form method="post">
                 {% load crispy_forms_tags %}
                 {% csrf_token %}
-                <table>{{ form | crispy }}</table>
+                {{ form | crispy }}
                 <button type="submit">Send</button>
             </form>
         </div>
