@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 def project_list(request):
 	queryset = Project.objects.all().order_by("category").filter(status=1)
-	template_name = "portfolio.html"
+	template_name = "portfolio/portfolio.html"
 	form_class = ContactForm
 	context = {
 		"projects": queryset,

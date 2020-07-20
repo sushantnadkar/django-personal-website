@@ -15,6 +15,9 @@ class ContactForm(forms.Form):
 
         if settings.DEBUG:
             con = get_connection('django.core.mail.backends.console.EmailBackend')
+        else:
+            con = None
+
         send_mail(
             self.cleaned_data["subject"],
             self.cleaned_data["message"],

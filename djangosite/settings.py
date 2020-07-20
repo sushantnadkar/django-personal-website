@@ -14,8 +14,13 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATES_DIRS = os.path.join(BASE_DIR, "templates")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+# TEMPLATES_DIRS = [
+#     os.path.join(BASE_DIR, "templates")
+# ]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "portfolio/static"),
+    os.path.join(BASE_DIR, "blog/static"),
+)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
 
@@ -29,7 +34,7 @@ SECRET_KEY = '!x@jf#o$xbgh@u#%ic#7&n@+!lq1_5yu1j!r=7j_o6p(b%=us6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.0.150", "127.0.0.1"]
+ALLOWED_HOSTS = ["192.168.0.150", "127.0.0.1", "*"]
 
 
 # Application definition
@@ -62,7 +67,7 @@ ROOT_URLCONF = 'djangosite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIRS],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

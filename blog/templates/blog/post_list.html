@@ -1,9 +1,9 @@
-{% extends "base.html" %} 
+{% extends "blog/base.html" %} 
 {% block content %}
-{% include 'header.html' %}
+{% include 'blog/header.html' %}
 <div id="posts" class="row m-auto">
 
-    {% include 'paginate.html' %}
+    {% include 'blog/paginate.html' %}
 
         {% for post in post_list %}
         <div class="card mb-5">
@@ -17,7 +17,7 @@
             </div>
         </div>
         {% endfor %}
-    {% include 'paginate.html' %}
+    {% include 'blog/paginate.html' %}
 
 </div>
 {%endblock%}
