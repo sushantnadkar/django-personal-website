@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-import portfolio.models
+import djangosite.portfolio.models
 
 
 class Migration(migrations.Migration):
@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('image', models.ImageField(upload_to='portfolio/projects/')),
                 ('status', models.IntegerField(choices=[(0, 'On going'), (1, 'Completed')], default=0)),
                 ('description', models.TextField()),
-                ('category', models.ForeignKey(default=portfolio.models.Category.get_default_pk, on_delete=django.db.models.deletion.SET_DEFAULT, to='portfolio.Category')),
+                ('category', models.ForeignKey(default=djangosite.portfolio.models.Category.get_default_pk, on_delete=django.db.models.deletion.SET_DEFAULT, to='portfolio.Category')),
             ],
         ),
     ]
