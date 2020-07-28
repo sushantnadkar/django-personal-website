@@ -21,8 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #     os.path.join(BASE_DIR, "templates")
 # ]
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "portfolio/static"),
-    os.path.join(BASE_DIR, "blog/static"),
+    os.path.join(BASE_DIR, "djangosite/portfolio/static"),
+    os.path.join(BASE_DIR, "djangosite/blog/static"),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
@@ -56,8 +56,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_summernote',
     'storages',
-    'blog',
-    'portfolio',
+    'djangosite.blog',
+    'djangosite.portfolio',
     'crispy_forms',
 ]
 
