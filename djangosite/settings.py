@@ -23,6 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "djangosite/portfolio/static"),
     os.path.join(BASE_DIR, "djangosite/blog/static"),
+    os.path.join(BASE_DIR, "djangosite/issue_tracker/static"),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
@@ -48,7 +49,6 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -59,7 +59,9 @@ INSTALLED_APPS = [
     'djangosite.blog',
     'djangosite.portfolio',
     'crispy_forms',
-]
+    'djangosite.issue_tracker',
+    'django.contrib.admin',
+ ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -158,7 +160,9 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Email server settings for Google
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+if not DEBUG:
+    EMAIL_BACKEND  = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = env.str("EMAIL_HOST_USER")
@@ -187,6 +191,7 @@ AWS_S3_OBJECT_PARAMETERS = {
     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
     'CacheControl': 'max-age=94608000',
 }
+AWS_DEFAULT_ACL = None
 
 AWS_STORAGE_BUCKET_NAME = env.str("AWS_STORAGE_BUCKET_NAME")
 AWS_S3_REGION_NAME = env.str("AWS_S3_REGION_NAME")
@@ -203,3 +208,7 @@ STATICFILES_STORAGE = 'djangosite.custom_storage.StaticStorage'
 
 MEDIAFILES_LOCATION = "media"
 DEFAULT_FILE_STORAGE = "djangosite.custom_storage.MediaStorage"
+
+
+LOGIN_REDIRECT_URL = "issues_home"
+LOGOUT_REDIRECT_URL = "issues_home"

@@ -23,6 +23,7 @@ urlpatterns = [
     path("blog/", include("djangosite.blog.urls")),
     path("summernote/", include("django_summernote.urls")),
     path("", include("djangosite.portfolio.urls")),
+    path("issues/", include("djangosite.issue_tracker.urls")),
 ]
 
 if settings.DEBUG:
