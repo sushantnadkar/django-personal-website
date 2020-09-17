@@ -1,16 +1,16 @@
-{% if is_paginated %}
+{% if posts.has_other_pages %}
 <div class="row paginate">
     <div>
-        {% if page_obj.has_previous %}
+        {% if posts.has_previous %}
             <a href="?page={{ page_obj.previous_page_number }}">&laquo; Prev</a>
         {% else %}
             <a class="disabled">&laquo; Prev</a>
         {% endif %}
 
-        <em>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</em>
+        <em>Page {{ posts.number }} of {{ posts.paginator.num_pages }}</em>
 
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">Next &raquo;</a>
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">Next &raquo;</a>
         {% else %}
             <a class="disabled">Next &raquo;</a>
         {% endif %}
