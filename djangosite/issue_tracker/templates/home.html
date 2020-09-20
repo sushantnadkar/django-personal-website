@@ -3,4 +3,13 @@
 {% block content %}
 <h2>Home page</h2>
 <p>Welcome {% if user.is_authenticated %}{{ user.username }}!{% else %}visitor!{% endif %}</p>
+<p>
+    <a href="{% url 'list_issue' %}">List All Issues</a>
+</p>
+{% if user.is_authenticated %}
+<p>
+    <a href="{% url 'create_issue' %}">New Issue</a>
+</p>
+
+{% endif %}
 {% endblock content %}

@@ -1,0 +1,11 @@
+<div class="main">
+
+    <!-- Specify fields to be displayed -->
+    {{ issue.title }}<br/>
+    {{ issue.description }}<br/>
+    <p>
+        <a href="{% url 'update_issue' issue.slug %}">Update</a>&nbsp;
+        <a href="{% url 'delete_issue' issue.slug %}">Delete</a>
+    </p>
+
+</div>

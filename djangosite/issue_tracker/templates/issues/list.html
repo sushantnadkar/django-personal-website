@@ -1,0 +1,11 @@
+<div class="main">
+
+    {% for issue in issues %}
+
+        <a href="{% url 'issue_details' issue.slug %}">{{ issue.title }}</a><br/>
+        {{ issue.description }}<br/>
+        <hr/>
+
+    {% endfor %}
+
+</div>
