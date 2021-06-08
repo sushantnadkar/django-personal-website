@@ -11,7 +11,7 @@ environs==8.0.0
 gunicorn==20.0.4
 jmespath==0.10.0
 marshmallow==3.7.1
-Pillow==7.2.0
+Pillow==8.2.0
 psycopg2-binary==2.8.5
 python-dateutil==2.8.1
 python-dotenv==0.14.0
